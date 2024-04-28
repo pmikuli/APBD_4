@@ -1,9 +1,11 @@
+using APBD_Zadanie_6.Services;
 using Zadanie5.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddTransient<IWarehouseService, WarehouseService>();
+builder.Services.AddTransient<IWarehouseProcedureService, WarehouseProcedureService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
